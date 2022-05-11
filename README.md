@@ -22,3 +22,20 @@
 3. Critic有兩種常用的訓練方法：MC(要玩完整場遊戲才能讀到訓練資料) ＆ TD(希望不用玩完整場遊戲才能得到訓練資料)
 4. Critic怎麼被用在訓練Actor上面？
 5. Reinforcement learning 訓練的好不好跟sample的好不好關係非常大！
+
+## DRL: When Reward Is Sparse
+1. 假設大部分的reward都是0，代表你根本無法得知該action是好還是壞！
+2. 我們只能想辦法去提供額外的reward，來幫助agent去學習 -> reward shaping！
+
+## DRL: Imitation Learning (連reward都沒有的時候怎麼辦？)
+1. 在沒有reward的情況下，要如何訓練agent去跟環境互動呢？ -> imitation learning
+2. Behavior cloning會發生的問題：
+
+   機器無法學到人類不會經歷某些狀況的情況下如何處理問題！
+
+   機器無法判斷哪些行為該模仿，哪些不該模仿！
+   
+   機器的能力可能是有限的，所以無法完全模仿其行為，只能部分模仿！
+
+3. 讓機器自己定義Reward：藉由demonstration of expert跟environment去反推reward function！
+4. GAN跟IRL有異曲同工之妙：Generator -> Actor, Discriminator -> Reward function
