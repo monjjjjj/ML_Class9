@@ -16,3 +16,9 @@
 ## DRL:Policy Gradient
 1. 搜集資料這一段是發生在for迴圈裡！-> 所以RL的訓練過程很花時間！
 
+## DRL: Actor-Critic
+1. Value function是想要未卜先知，想要在遊戲尚未結束的時候就先猜測能夠得到多少的the discounted cumulated reward
+2. Value function的數值是跟觀察的對象有關係的！
+3. Critic有兩種常用的訓練方法：MC(要玩完整場遊戲才能讀到訓練資料) ＆ TD(希望不用玩完整場遊戲才能得到訓練資料)
+4. Critic怎麼被用在訓練Actor上面？
+5. Reinforcement learning 訓練的好不好跟sample的好不好關係非常大！
